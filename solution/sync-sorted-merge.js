@@ -22,15 +22,14 @@ const MinHeap = require("./heap");
  *  log source hence it is more reliable as a data structure for this case
  *
  *
- * @param {*} logSources to log
- * @param {*} printer class
+ * @param {*} logSources sources to read from
+ * @param {*} printer class to print logs
  */
 
 // Print all entries, across all of the sources, in chronological order.
 module.exports = (logSources, printer) => {
   const heap = new MinHeap();
 
-  // drain min from each source
   logSources.forEach((source, index) => {
     heap.insert({ index, log: source.pop() });
   });

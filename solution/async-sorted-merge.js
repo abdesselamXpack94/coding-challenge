@@ -28,8 +28,8 @@ const MinHeap = require("./heap");
  * 
  * 
  * 
- * @param {*} logSources 
- * @param {*} printer 
+ * @param {*} logSources sources to read from
+ * @param {*} printer class to print logs
  */
 module.exports = (logSources, printer) => {
   return new Promise(async (resolve, reject) => {
