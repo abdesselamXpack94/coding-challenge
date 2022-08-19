@@ -50,10 +50,6 @@ class MinHeap {
       return node.log.date;
     }
   
-    isFull() {
-      return this.size == this.capacity;
-    }
-  
     swap(index1, index2) {
       let temp = this.storage[index1];
       this.storage[index1] = this.storage[index2];
@@ -91,6 +87,9 @@ class MinHeap {
     }
   
     /**
+     * Heapify down is used when we remove the top element from a heap.
+     * Removal of an element is done by swapping the top element with the last element at the bottom of the tree
+     * removing the last element, and then heapfying the new top element down to maintain the heap property.
      * 
      */
     heapifyDown() {
